@@ -1,0 +1,311 @@
+/* Configuración General y Fondo de Cielo Estrellado Nocturno */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: #e2e8f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Contenedor de estrellas dinámicas de fondo */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Cometas cruzando la pantalla */
+.comet {
+    position: fixed;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,1), transparent);
+    transform: rotate(-45deg);
+    pointer-events: none;
+    z-index: -1;
+    animation: shoot 4s infinite linear;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(-100px, -100px) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(1200px, 1200px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Encabezado Estilo Constelación */
+header {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    color: #93c5fd;
+    text-shadow: 0 0 10px rgba(147, 197, 253, 0.5);
+}
+
+.search-box {
+    display: flex;
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.search-box button {
+    border: none;
+    background: #3b82f6;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* Título con brillo estelar */
+.main-title {
+    text-align: center;
+    margin: 30px 0 10px;
+    color: #f8fafc;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+/* Tarjetas (Efecto Cristal Galáctico) */
+.card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card h2 {
+    color: #93c5fd;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.5);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Perfil */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-img-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #60a5fa;
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.location {
+    color: #94a3b8;
+    font-weight: bold;
+    margin: 5px 0 15px;
+}
+
+.bio h3 {
+    color: #cbd5e1;
+}
+
+/* Grillas y Cajas de Contenido */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item-box {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #60a5fa;
+}
+
+.item-box h3 {
+    color: #f1f5f9;
+    margin-bottom: 8px;
+}
+
+/* Música */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.music-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px;
+}
+
+.music-cover {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.music-details h3 {
+    color: #f1f5f9;
+    margin-top: 10px;
+}
+
+.music-details h4 {
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.yt-button {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #dc2626;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
+}
+
+.yt-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Artistas */
+.artist-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.artist-card h3 {
+    color: #f1f5f9;
+}
+
+.artist-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+/* Frase Cita */
+.quote-box {
+    background: rgba(30, 41, 59, 0.7);
+    border-left: 5px solid #60a5fa;
+    padding: 20px;
+    font-style: italic;
+    color: #e2e8f0;
+    border-radius: 0 10px 10px 0;
+}
+
+.quote-box cite {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+    font-style: normal;
+    color: #93c5fd;
+}
+
+/* Metas */
+.goals-content {
+    color: #cbd5e1;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+    margin-top: 40px;
+}

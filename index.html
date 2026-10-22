@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <h2 class="logo"><i class="fa-solid fa-blog"></i> Mi Blog</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar en el blog..." onkeyup="filtrarContenido()">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">MI BLOG PERSONAL</h1>
+
+        <!-- Perfil -->
+        <section class="card profile-section searchable">
+            <div class="profile-img-container">
+                <!-- Aquí cambiarás 'img/tu-foto.jpg' por el nombre real de tu foto -->
+                <img src="img/foto.jpeg" alt="Mi Foto de Perfil" id="foto-perfil">
+            </div>
+            <div class="profile-info">
+                <h2><i class="fa-solid fa-user"></i> Briscela Shirley Choquehuanca Ccama</h2>
+                <p class="location"><i class="fa-solid fa-location-dot"></i> Perú, Arequipa, Caylloma, Coporaque</p>
+                <div class="bio">
+                    <h3><i class="fa-solid fa-address-card"></i> Presentación</h3>
+                    <p>¡Hola! bienvenido a mi rincón en la web, te invito a descubrir un pedacito de mi universo. Aquí comparto lo que soy 
+                        através del arte, el deporte, la música, la lectura.Creo que firmemente que con esfuerzo y dedicación podemos materalizar
+                        cada meta que nos proponemos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasatiempos -->
+        <section class="card searchable">
+            <h2><i class="fa-solid fa-palette"></i> Mis Pasatiempos</h2>
+            <div class="grid-container">
+                <div class="item-box">
+                    <h3>Pintar</h3>
+                    <p>Me encanta pintar es muy inspirador y tranquilo darle color a varios de mis dibujos creando colores que no conocia.</p>
+                </div>
+                <div class="item-box">
+                    <h3>Dibujar</h3>
+                    <p>Me facina dibujara ya que puede crar personajes que solo en mi mente puedo visualizar.</p>
+                </div>
+                <div class="item-box">
+                    <h3>Leer</h3>
+                    <p>Leer para mi tiene muchos significados para adquirir conocimiento saber de nuestra historia,
+                        transportarse a mundos ficcticios y muchas más.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deportes -->
+        <section class="card searchable">
+            <h2><i class="fa-solid fa-person-swimming"></i> Mis Deportes Favoritos</h2>
+            <div class="item-box">
+                <h3>Natación</h3>
+                <p>Me encanta la natación aunque no lo practique mucho.</p>
+            </div>
+        </section>
+
+        <!-- Música -->
+        <section class="card searchable">
+            <h2><i class="fa-solid fa-music"></i> Mis Gustos Musicales</h2>
+            <div class="music-grid">
+                 <!-- Canción 1 -->
+                <div class="music-card">
+                    <img src="img/portada1.jpeg" alt="Portada de canción" class="music-cover">
+                    <div class="music-details">
+                        <h3>Story of a warrior</h3>
+                        <h4>Artista: John Michael Howell</h4>
+                        <p>Resalta un mensaje de resilencia, esperanza y el valor de seguir adelante.</p>
+                        <!-- Enlace directo a YouTube -->
+                        <a href="https://youtu.be/2v0abnxbPFA?si=QkVchEIf0lCoLlyg" target="_blank" class="yt-button">
+                            <i class="fa-brands fa-youtube"></i> Escuchar en YouTube
+                        </a>
+                    </div>
+                </div>
+                <!-- Canción 2-->
+                <div class="music-card">
+                    <img src="img/portada2.jpeg" alt="Portada de canción" class="music-cover">
+                    <div class="music-details">
+                        <h3>Elements</h3>
+                        <h4>Artista: John Michael Howell</h4>
+                        <p>Utiliza los elementos como una metáfora para describir el amor absoluto, que se mantiene vivo en cada rincón de la naturaleza.</p>
+                        <!-- Enlace directo a YouTube -->
+                        <a href="https://youtu.be/CELLJRSKakw?si=39rCV95CPGPGONrp" target="_blank" class="yt-button">
+                            <i class="fa-brands fa-youtube"></i> Escuchar en YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Autores y Artistas -->
+        <section class="card searchable">
+            <h2><i class="fa-solid fa-book-open"></i> Autores de Libros y Artistas de Pintura</h2>
+            <div class="grid-container">
+                <div class="artist-card">
+                    <h3>José María Arguedas</h3>
+                    <img src="img/obra1.jpeg" alt="Foto y Obra" class="artist-img">
+                    <p><strong>Obra representativa:</strong> Yawar Fiesta</p>
+                    <p>Representa la resistencia cultural y el orgullo andino.
+                       Es la lucha de un pueblo que defiende su identidad y tradiciones hasta con la sangre frente a la opresión.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frase Favorita -->
+        <section class="card quote-section searchable">
+            <h2><i class="fa-solid fa-quote-left"></i> Frase Favorita</h2>
+            <blockquote class="quote-box">
+                <p>"La emoción más antigua y más intensa de la humanidad es el miedo, y el más antiguo y más intenso de los miedos es el miedo a lo desconocido."</p>
+                <cite>— Lord of the Mysteries (Yuan Ye)</cite>
+            </blockquote>
+        </section>
+
+        <!-- Sueños y Metas -->
+        <section class="card searchable">
+            <h2><i class="fa-solid fa-bullseye"></i> Mis Sueños y Metas</h2>
+            <div class="goals-content">
+                <p>Estoy enfocada en terminar mis estudios técnicos en ACC para luego dar el salto a la formación universitaria. 
+                   Considero que la educación continua es la base del éxito. A mediano y largo plazo, mi mayor incentivo personal es alcanzar la estabilidad necesaria para viajar con mi familia,
+                    recorriendo primero las maravillas del Perú y abriéndonos las puertas hacia el mundo.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi Blog Personal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
